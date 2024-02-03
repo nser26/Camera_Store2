@@ -116,10 +116,10 @@ body {
 }
 
 .left-card .info-camerastore p:hover {
-  border-top: 0.5px solid;
+  border-top: 0.9px solid;
   border-bottom: 1px solid;
   border-color: #9e9e9e;
-  transform: scale(1.04);
+  transform: scale(1.01);
 }
 .left-card .info-camerastore p:hover a {
   color: var(--back-yellowOne);

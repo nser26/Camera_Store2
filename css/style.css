@@ -1,0 +1,611 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+:root {
+  --back-body: #1d1f23;
+  --back-leftCard: #141618;
+  --back-yellowOne: #f6cc4b;
+  --color-black: #333;
+}
+
+body {
+  background-color: var(--back-body) !important;
+}
+
+/* body{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #e6e6e6;
+} */
+
+::selection {
+  background: #f7cc49;
+  color: #333;
+}
+
+/* body:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(55% at right 30%);
+  background: #e6e6e6;
+  background-image: linear-gradient( 0deg,  #fd9bb0 10%, #F6416C 100%);
+  background-image: linear-gradient(135deg, #c5aa58db 10%, #ffc107 100%);;
+} */
+
+/* Nav */
+
+.camera-store {
+  margin: auto;
+}
+
+.navName {
+  width: 100%;
+  height: 60px;
+  background-color: var(--back-leftCard);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.navName p {
+  width: 70%;
+  text-transform: uppercase;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navName p a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  transition: 0.4s;
+}
+
+.navName p span {
+  color: var(--back-yellowOne);
+}
+#but_drop_down {
+  padding: 6px;
+  width: 150px;
+  background: #1d1d1e;
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+  transition: 0.4s linear;
+  overflow: hidden;
+}
+.navName p #but_drop_down:hover,.change_click {
+  color: #f7cc49;
+  transform: scale(1.05);
+  box-shadow: 0px 0px 5px 0px #f7cc4985;
+}
+
+.parent-card {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+
+/********************************************Start Left Card******************************************** */
+.left-card {
+  /* width: 25%; */
+  /* height: fit-content; */
+  border-radius: 12px;
+  background: var(--back-leftCard);
+  margin: 15px 0;
+  /* position: fixed; */
+  /* left: 3%; */
+}
+
+.left-card .info-camerastore {
+  width: 250px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.left-card .info-camerastore .topic {
+  width: 100%;
+  color: #333;
+  padding: 20px 0;
+  border-radius: 15px 12px 0 0;
+  margin: 0;
+  background-color: #f7cc49;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.left-card .info-camerastore p {
+  padding: 15px;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 20px;
+  text-align: start;
+  letter-spacing: 1.4px;
+  transition: 0.2s linear;
+}
+
+.left-card .info-camerastore a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.left-card .info-camerastore p:hover {
+  border-top: 0.9px solid;
+  border-bottom: 1px solid;
+  border-color: #9e9e9e;
+  transform: scale(1.01);
+  color: var(--back-yellowOne);
+}
+
+.left-card .info-camerastore p:hover a {
+  color: var(--back-yellowOne);
+}
+
+/********************************************End Left Card******************************************** */
+
+/********************************************Start Right Card******************************************** */
+
+.right-card {
+  /* width: 25%; */
+  height: fit-content;
+  /* position: absolute; */
+  right: 10%;
+}
+
+.right-card .Box-Photo-LeftCard {
+  width: 300px;
+  height: 195px;
+  background-color: var(--back-leftCard);
+  border-radius: 15px;
+  text-align: center;
+  transform: translate(6px, 8px);
+  margin: 1px 0 22px 0;
+  display: flex;
+}
+
+.right-card .Box-Photo-LeftCard img {
+  /* width: 157px;
+  transform: translate(85px, -50px);
+  animation: changePadding linear 1.1s infinite alternate;
+  animation-play-state: paused;
+  filter: drop-shadow(3px 12px 6px );
+  color: #eaeaea54; */
+
+  width: 130px;
+  transform: translate(85px, -50px);
+  animation: changePadding linear 1.1s infinite alternate both;
+  animation-play-state: paused;
+  filter: drop-shadow(3px 12px 6px);
+  color: #eaeaea54;
+}
+
+.right-card .Box-Photo-LeftCard:hover .save img {
+  animation-play-state: running;
+}
+
+@keyframes changePadding {
+  /* 0%{
+    transform: translate(80px, 25px);
+  } */
+  50% {
+    transform: translate(85px, -60px);
+  }
+
+  100% {
+    transform: translate(85px, -50px);
+  }
+}
+
+.right-card .Box-Photo-LeftCard .save p {
+  width: 170px;
+  transform: translate(1px, 35px);
+  font-size: 20px;
+  color: #ffffffc2;
+  text-transform: uppercase;
+  text-align: start;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.right-card .Box-Photo-LeftCard .save a {
+  color: #f7cc49;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  top: 10px;
+  right: -25px;
+  transition: 0.4s;
+}
+
+.right-card .Box-Photo-LeftCard .save a:hover {
+  color: #cddc39;
+}
+
+/********************************************End Right Card******************************************** */
+
+/********************************************Start Center Card******************************************** */
+
+.container-box {
+  display: flex;
+  max-width: fit-content;
+  height: fit-content;
+  background: radial-gradient(#34353a, transparent);
+  border-radius: 12px;
+  justify-content: space-between;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+  margin: 10px auto;
+}
+
+.container-box::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  clip-path: circle(65% at right 35%);
+  background-image: linear-gradient(135deg, #c5aa58db 10%, #ffc107 100%);
+}
+
+.container-box .box.one {
+  padding: 10px 5px 0px 15px;
+}
+
+.box.one .details .topic {
+  font-size: 30px;
+  font-weight: 500;
+  color: #ffff;
+}
+
+.box.one .details p {
+  color: #ffffffab;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.box.one .rating {
+  color: #f7cc49;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.box.one .price-box {
+  margin-top: 16px;
+}
+
+.box.one .discount {
+  font-size: 20px;
+  margin: 10px 0 0 12px;
+  position: relative;
+  color: #737373;
+}
+
+.box.one .discount:before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100px;
+  background: #737373;
+  top: 50%;
+  left: -8px;
+}
+
+.box.one .price {
+  color: var(--back-yellowOne);
+  font-size: 30px;
+}
+
+.box.one .button1 {
+  margin: 20px 0 50px 0;
+}
+
+.box.one .button1 button {
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  background: var(--back-yellowOne);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.06, 0.06, 0.08, 0.1);
+}
+
+.button1 button:hover {
+  transform: scale(0.98);
+  box-shadow: 0px 1px 20px 3px #000000;
+}
+
+.container-box .box.two .image {
+  position: relative;
+  right: 0;
+  top: 20px;
+  height: 200px;
+  width: 330px;
+}
+
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.9s ease;
+  transform: translate(40px, 33px) scale(1.2);
+}
+
+.container-box:hover .image img {
+  transform: translate(40px, 33px) scale(1.3);
+}
+
+.image .imgtwo {
+  transform: translate(-30px, 38px) scale(1.2);
+}
+
+.container-box:hover .image .imgtwo {
+  transform: translate(-30px, 38px) scale(1.3);
+}
+
+.container-box .box.two .image-box {
+  position: relative;
+  text-align: right;
+  right: 0;
+  bottom: 27px;
+}
+
+.box.two .image-box .info {
+  margin: 0 35px 0 0;
+  transform: translateY(60px);
+}
+
+.box.two .info .brand {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--back-body);
+}
+
+.box.two .info .name {
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffffc2;
+}
+
+.box.two .info .shipping {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-black);
+}
+
+.box.two .button2 {
+  margin: 17px 0;
+}
+
+.button2 button {
+  outline: none;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #f6e3e335;
+  border-radius: 12px;
+  padding: 8px 17px;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.button2 button:hover {
+  color: #333;
+}
+
+/********************************************End Center Card******************************************** */
+
+/********************************************Start Bottom Card******************************************** */
+
+.bottom {
+  width: 80%;
+  margin: auto;
+}
+
+.botton-card {
+  display: flex;
+  /* height: 300px; */
+  align-items: center;
+  padding-bottom: 15px;
+  margin: 10px 30px;
+  /* position: relative;
+  left: 140px; */
+}
+
+.latest {
+  width: 1200px;
+  color: #ffff;
+  font-size: 20px;
+  text-transform: capitalize;
+  margin: auto;
+}
+
+.botton-card .new-card {
+  width: 213px;
+  height: 300px;
+  position: relative;
+  padding: 10px;
+  background: radial-gradient(#34353a, transparent);
+  margin: 10px;
+  text-transform: capitalize;
+  font-weight: 700;
+  border-radius: 15px;
+  box-shadow: 1px 3px 16px 6px #000000b8;
+}
+
+.botton-card .new-card:hover img {
+  transform: translate(55px, 9px) scale(1.4);
+}
+
+.botton-card .new-card .new {
+  width: 45px;
+  background-color: #ffeb3b;
+  float: right;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.botton-card .new-card img {
+  transform: translate(55px, 9px) scale(1.3);
+  height: 90px;
+  transition: 0.5s linear;
+}
+
+.botton-card .new-card .type {
+  padding: 10px 0;
+  color: #ffeb3b;
+  margin: 0;
+}
+
+.botton-card .new-card a {
+  text-decoration: none;
+}
+
+.botton-card .new-card .name {
+  padding: 0px 0;
+  color: #ffffff63;
+  margin: 0;
+  transition: 0.4s linear;
+}
+
+.botton-card .new-card a:hover p {
+  color: #ffff;
+}
+
+.botton-card .new-card .price {
+  color: #ffeb3b;
+  margin-top: 10px;
+  margin-left: 0;
+  position: absolute;
+  bottom: 0;
+  /* left: 18px; */
+  right: 20px;
+}
+
+/*************************************************** Page Sony *********************/
+
+.camera-Sony,
+.camera-Canon,
+.camera-Nilon,
+.camera-Lumix {
+  flex-wrap: wrap;
+}
+
+/* .cards-sony,
+.cards-canon,
+.cards-nikon,
+.cards-lumix {
+  height: 300px;
+  width: 213px !important;
+} */
+
+.login_card {
+  width: 40%;
+  height: 50%;
+  background-color: rgba(211, 211, 211, 0.589);
+  /* filter: blur(3px); */
+  position: absolute;
+  top: 10%;
+  right: 18%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* position: relative; */
+}
+.login_card::after{
+  content: " ";
+  /* width: 300px; */
+  border-width: 10px 10px 10px 10px ;
+  border-style: solid;
+  border-color: transparent transparent #ffd248  transparent;
+  position: absolute;
+  top: -20px;
+  right: 15px;
+  /* animation: up_down linear .3s  infinite direction fill-mode; */
+  animation: up_down 2s linear  infinite alternate ;
+}
+@keyframes up_down {
+  50%{
+    top: -30px;
+  }
+  100%{
+    top: -22px;
+  }
+}
+.login_card .login {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+}
+.login h3{
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+#userName,#password{
+  width: 80%;
+  margin: 5px;
+  outline: none;
+  padding: 7px;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+}
+
+#submit{
+  width: 50%;
+  margin-top: 10px;
+  outline: none;
+  padding: 7px;
+  border: none;
+  border-radius: 15px;
+}
+
+.actives{
+  filter: blur(10px);
+}
+.login_card_active{
+  display: none;
+}
+.login_card>p{
+  font-size: 30px;
+  color: var(--back-yellowOne);
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  transition: 1s linear;
+  cursor: pointer;
+}
+.login_card>p:hover{
+  transform: scale(1.2);
+  filter: drop-shadow(1px 3px 2px black);
+}

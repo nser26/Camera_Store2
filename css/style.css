@@ -86,7 +86,8 @@ body {
   transition: 0.4s linear;
   overflow: hidden;
 }
-.navName p #but_drop_down:hover,.change_click {
+.navName p #but_drop_down:hover,
+.change_click {
   color: #f7cc49;
   transform: scale(1.05);
   box-shadow: 0px 0px 5px 0px #f7cc4985;
@@ -94,9 +95,10 @@ body {
 
 .parent-card {
   display: flex;
-  justify-content: space-around;
-  width: 80%;
+  justify-content: center;
+  /* width: 80%; */
   margin: auto;
+  gap: 2em;
 }
 
 /********************************************Start Left Card******************************************** */
@@ -457,7 +459,7 @@ body {
 }
 
 .botton-card .new-card:hover img {
-  transform: translate(55px, 9px) scale(1.4);
+  transform:  scale(1.2);
 }
 
 .botton-card .new-card .new {
@@ -470,9 +472,10 @@ body {
 }
 
 .botton-card .new-card img {
-  transform: translate(55px, 9px) scale(1.3);
-  height: 90px;
-  transition: 0.5s linear;
+    /* transform: translate(55px, 9px) scale(1.3); */
+    height: 90px;
+    transition: 0.5s linear;
+    margin: 20px 0 0 25px;
 }
 
 .botton-card .new-card .type {
@@ -538,23 +541,23 @@ body {
 
   /* position: relative; */
 }
-.login_card::after{
+.login_card::after {
   content: " ";
   /* width: 300px; */
-  border-width: 10px 10px 10px 10px ;
+  border-width: 10px 10px 10px 10px;
   border-style: solid;
-  border-color: transparent transparent #ffd248  transparent;
+  border-color: transparent transparent #ffd248 transparent;
   position: absolute;
   top: -20px;
   right: 15px;
   /* animation: up_down linear .3s  infinite direction fill-mode; */
-  animation: up_down 2s linear  infinite alternate ;
+  animation: up_down 2s linear infinite alternate;
 }
 @keyframes up_down {
-  50%{
+  50% {
     top: -30px;
   }
-  100%{
+  100% {
     top: -22px;
   }
 }
@@ -567,11 +570,12 @@ body {
   align-items: center;
   align-content: space-around;
 }
-.login h3{
+.login h3 {
   font-weight: bolder;
   margin-bottom: 10px;
 }
-#userName,#password{
+#userName,
+#password {
   width: 80%;
   margin: 5px;
   outline: none;
@@ -581,22 +585,27 @@ body {
   font-size: 15px;
 }
 
-#submit{
+#submit {
   width: 50%;
   margin-top: 10px;
   outline: none;
   padding: 7px;
   border: none;
   border-radius: 15px;
+  transition: 0.3s;
+}
+#submit:hover{
+  background: linear-gradient(0deg, #e6bf47, yellow, transparent);
+
 }
 
-.actives{
+.actives {
   filter: blur(10px);
 }
-.login_card_active{
+.login_card_active {
   display: none;
 }
-.login_card>p{
+.login_card > p {
   font-size: 30px;
   color: var(--back-yellowOne);
   position: absolute;
@@ -605,7 +614,7 @@ body {
   transition: 1s linear;
   cursor: pointer;
 }
-.login_card>p:hover{
+.login_card > p:hover {
   transform: scale(1.2);
   filter: drop-shadow(1px 3px 2px black);
 }
